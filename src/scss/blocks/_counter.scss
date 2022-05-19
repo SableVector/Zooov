@@ -1,0 +1,153 @@
+/* === COUNTER === */
+// .counter {
+//     // .counter__label
+//     &__label {
+//         font-size: $b * 7;
+//         line-height: 140%;
+//     }
+//     // .counter__body
+//     &__body {
+//         display: flex;
+//     }
+//     // .counter__btn
+//     &__btn {
+//         @include reset-btn;
+
+//         position: relative;
+//         min-height: 100%;
+//         padding: 0 $b * 8;
+//         font-size: $b * 5;
+//         color: #cecece;
+//         background-color: $color-bg;
+
+//         &::before,
+//         &::after {
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             width: $b * 5;
+//             height: $b;
+//             content: "";
+//             background-color: #cecece;
+//         }
+
+//         &[data-counter-minus] {
+//             border-radius: $b * 4 0 0 $b * 4;
+
+//             &::before,
+//             &::after {
+//                 transform: translate(-50%, -50%);
+//             }
+//         }
+
+//         &[data-counter-plus] {
+//             border-radius: 0 $b * 4 $b * 4 0;
+
+//             &::before {
+//                 transform: translateX(-50%);
+//             }
+
+//             &::after {
+//                 transform: translateX(-50%) rotate(90deg);
+//             }
+//         }
+//     }
+//     // .counter__input
+//     &__input {
+//         padding: $b * 11 $b * 3 $b * 8;
+//         text-align: center;
+//         background-color: $color-bg;
+//         border: none;
+//     }
+// }
+
+.counter {
+    @media (min-width: $md3+px) {
+        display: flex;
+        gap: $b * 5;
+        align-items: center;
+    }
+    // .counter__label
+    &__label {
+        flex: 1 1 auto;
+        font-size: $b * 7;
+        line-height: 140%;
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    // .counter__body
+    &__body {
+        display: flex;
+
+        @media (min-width: $md3+px) {
+            // flex: 0 1 $b * 100;
+        }
+    }
+    // .counter__btn
+    &__btn {
+        @include reset-btn;
+
+        position: relative;
+        min-height: 100%;
+        padding: 0 $b * 8;
+        font-size: $b * 5;
+        color: #cecece;
+        background-color: $color-bg;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: $b * 5;
+            height: $b;
+            content: "";
+            background-color: #cecece;
+        }
+
+        &[data-counter-minus] {
+            border-radius: $b * 4 0 0 $b * 4;
+
+            &::before,
+            &::after {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &[data-counter-plus] {
+            border-radius: 0 $b * 4 $b * 4 0;
+
+            &::before {
+                transform: translateX(-50%);
+            }
+
+            &::after {
+                transform: translateX(-50%) rotate(90deg);
+            }
+        }
+
+        &:focus {
+            @include focus;
+        }
+    }
+    // .counter__input
+    &__input {
+        width: 100%;
+        min-width: 0;
+        padding: $b * 11 $b * 3 $b * 8;
+        text-align: center;
+        background-color: $color-bg;
+        border: none;
+        appearance: none;
+
+        @media (min-width: $md3+px) {
+            max-width: $b * 68;
+        }
+
+        &:focus {
+            @include focus;
+        }
+    }
+}

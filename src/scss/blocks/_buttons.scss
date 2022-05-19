@@ -1,0 +1,68 @@
+/* === BUTTONS === */
+.button {
+    @include reset-btn;
+    @include transition(all);
+
+    position: relative;
+    display: inline-block;
+    padding: $b * 6 $b * 21;
+    font-weight: $fw-semiBold;
+    line-height: 140%;
+    border-radius: $b * 4;
+
+    // .button__colored
+    &__colored {
+        color: #fff;
+        background: $color-main;
+        border: 1px solid transparent;
+
+        &:focus {
+            @include focus;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: lighten($color-main, 1);
+                border: 1px solid $color-main;
+                box-shadow: 0 0 $b * 10 $b * 5 rgba($color-main, 0.5);
+            }
+        }
+    }
+
+    // .button__border
+    &__border {
+        color: $color-main;
+        background: transparent;
+        border: 1px solid $color-main;
+
+        &:focus {
+            @include focus;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                background-color: $color-main;
+                border: 1px solid $color-main;
+                box-shadow: 0 0 $b * 10 $b * 5 rgba($color-main, 0.5);
+            }
+        }
+    }
+    // .button__light
+    &__light {
+        font-size: $b * 7;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+                box-shadow: 0 0 $b * 10 $b * 5 rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    &._fw {
+        width: 100%;
+    }
+}

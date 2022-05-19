@@ -1,0 +1,107 @@
+/* === GLOBAL STYLES === */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $font-family-main;
+    font-size: $size-text;
+    font-weight: $fw-regular;
+    line-height: $line-height;
+    color: $color-text;
+
+    .menu-open & {
+        overflow: hidden;
+    }
+
+    .modal-open & {
+        overflow: hidden;
+    }
+}
+
+a {
+    font-family: $font-family-main;
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    // &._loaded {
+    // }
+}
+
+.footer {
+    margin-top: auto;
+}
+
+[class*="__container"] {
+    max-width: $md1 + px;
+    padding: 0 calc($containerPadding / 2) + px;
+    margin: 0 auto;
+    // @media (max-width: $md1+px) {
+    //     max-width: 970px;
+    // }
+    // @media (max-width: $md2+px) {
+    //     max-width: 750px;
+    // }
+    // @media (max-width: $md3+px) {
+    //     max-width: none;
+    //     padding: 0 10px;
+    // }
+}
+
+// Стили для отзывчивых картинок (ibg)
+// Снипет (HTML): ibg (div с картинкой и классами)
+// Снипет(HTML): ibga (a с картинками и классами)
+[class*="-ibg"] {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+[class*="-ibg_contain"] {
+    img {
+        object-fit: contain;
+    }
+}
+
+.home {
+    // .home__about
+    &__about {
+        margin: clamp(2.8125rem, 0.4018rem + 12.0536vw, 11.25rem) 0;
+    }
+    // .home__ration
+    &__ration {
+        margin-bottom: clamp(2.8125rem, 0.4018rem + 12.0536vw, 11.25rem);
+    }
+    // .home__enquiry
+    &__enquiry {
+        margin-bottom: clamp(2.8125rem, 0.4018rem + 12.0536vw, 11.25rem);
+    }
+    // .home__care
+    &__care {
+        padding: clamp(1.875rem, 0.9821rem + 4.4643vw, 5rem) 0;
+        margin-bottom: clamp(2.8125rem, 0.4018rem + 12.0536vw, 11.25rem);
+    }
+    // .home__faq
+    &__faq {
+        margin-bottom: clamp(2.8125rem, 0.4018rem + 12.0536vw, 11.25rem);
+    }
+}

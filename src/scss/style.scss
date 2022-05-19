@@ -1,0 +1,64 @@
+// === Стили Глобальные ===
+@import "libs/reset";
+// @import "libs/normalize";
+@import "global/functions";
+@import "global/variables";
+@import "global/mixin";
+@import "global/global";
+
+//=== Стилизация плагина Tippy.js ===
+// @import "libs/tippy";
+
+//=== Стилизация плагина Swiper ===
+@import "libs/swiper";
+
+//=== Стилизация плагина noUiSlider(range) ===
+// @import '../../node_modules/nouislider/dist/nouislider';
+// @import "libs/noUiSlider";
+
+//=== Подключение локальных шрифтов ===
+// @import "blocks/fonts";
+
+//=== Подключение меню бургера ===
+@import "blocks/menuBurger";
+
+//=== Подключение звездного меню ===
+// Снипет (HTML): rating
+// @import "blocks/rating";
+
+//=== Подключение Select ===
+// Снипет (HTML): select
+@import "blocks/select";
+
+//=== Подключение Checkbox ===
+// Снипет (HTML): checkbox
+@import "blocks/checkbox";
+
+//=== Подключение Радио-кнопок ===
+// Снипет (HTML): radio
+@import "blocks/radioButtons";
+
+//=== Подключение стилей количества ===
+// Снипет (HTML): quantity
+// @import "blocks/quantity";
+
+//=== Подключение стилей Табов ===
+// Снипет (HTML): tabs
+// @import "blocks/tabs";
+
+//=== Подключение стилей Счетчика ===
+// Снипет (HTML): counter
+@import "blocks/counter";
+
+// === Стили Блоков ===
+@import "blocks/title";
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/ration-card";
+@import "blocks/forms";
+@import "blocks/popups";
+@import "blocks/footer";
+
+// === Стили Отдельных страниц ===
+@import "blocks/main";
+// @import "blocks/policy";

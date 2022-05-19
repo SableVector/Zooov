@@ -1,0 +1,20 @@
+/* === TABS === */
+.tabs {
+    // .tabs__navigation
+    &__navigation {
+    }
+    // .tabs__title
+    &__title {
+        &._tab-active {
+        }
+
+        ._tab-spoller & {
+        }
+    }
+    // .tabs__content
+    &__content {
+    }
+    // .tabs__body
+    &__body {
+    }
+}

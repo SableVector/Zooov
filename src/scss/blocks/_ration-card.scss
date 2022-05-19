@@ -1,0 +1,91 @@
+/* === RATION_CARD === */
+.ration-card {
+    @include transition(box-shadow);
+
+    padding: 0 $b * 3;
+    padding-bottom: $b * 3;
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+    // .ration-card__image-ibg
+    &__image-ibg {
+        display: block;
+        padding-bottom: procent(335, 282);
+        margin: 0 -$b * 3;
+
+        &:focus {
+            @include focus;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $b * 22;
+        }
+
+        img {
+            pointer-events: none;
+        }
+    }
+    // .ration-card__header
+    &__header {
+        &:not(:last-child) {
+            margin-bottom: $b * 8;
+        }
+    }
+    // .ration-card__title
+    &__title {
+        display: block;
+        font-weight: $fw-bold;
+        line-height: 130%;
+
+        &:focus {
+            @include focus;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $b * 2;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    // .ration-card__subtitle
+    &__subtitle {
+        font-size: $b * 6;
+        line-height: 130%;
+        color: $color-help;
+    }
+    // .ration-card__body
+    &__body {
+        &:not(:last-child) {
+            margin-bottom: $b * 12;
+        }
+    }
+    // .ration-card__descr
+    &__descr {
+        font-size: $b * 7;
+        line-height: 140%;
+        color: $color-main-dark;
+
+        &:not(:last-child) {
+            margin-bottom: $b * 5;
+        }
+    }
+    // .ration-card__packaging
+    &__packaging {
+        font-size: $b * 6;
+        line-height: 130%;
+        color: $color-help;
+    }
+    // .ration-card__button
+    &__button {
+        @include text-truncate;
+
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/blocks/_head.html', {
+"title": "ZOOOV - Питание, которое полюбит ваш хвостик"
+})
+
+<body>
+	<div class="wrapper">
+		<!-- === HEADER === -->
+		@@include('html/blocks/_header.html',{})
+		<!-- === MAIN === -->
+		@@include('html/blocks/_home.html',{})
+		<!-- === FOOTER === -->
+		@@include('html/blocks/_footer.html',{})
+	</div>
+
+	<!-- === POPUP === -->
+	@@include('html/blocks/_popup.html',{
+		"display": "block",
+	})
+</body>
+
+</html>

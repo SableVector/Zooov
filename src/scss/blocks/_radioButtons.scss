@@ -1,0 +1,51 @@
+/* === RADIOBUTTONS === */
+.radio {
+    @include focus-within;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__style {
+        @include transition(all);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $b * 8;
+        height: $b * 8;
+        margin-right: $b * 4;
+        border: $b * 0.5 solid $color-main-dark;
+        border-radius: 50%;
+
+        &::after {
+            @include transition(all);
+
+            width: $b * 5;
+            height: $b * 5;
+            content: "";
+            background: $color-main;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
+
+    &__input {
+        @include visually-hidden;
+
+        &:checked ~ .radio__style {
+            border-color: $color-main;
+
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__lable {
+        font-size: $b * 7;
+        line-height: 140%;
+    }
+}

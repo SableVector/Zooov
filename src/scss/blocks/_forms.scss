@@ -1,0 +1,210 @@
+/* === FORMS === */
+.form {
+    width: 100%;
+    // .form__header
+    &__header {
+        &:not(:last-child) {
+            margin-bottom: $b * 17;
+        }
+    }
+    // .form__body
+    &__body {
+        &:not(:last-child) {
+            margin-bottom: $b * 11;
+        }
+    }
+    // .form__bottom
+    &__bottom {
+    }
+}
+
+.header-form {
+    // .header-form__title
+    &__title {
+        font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+        font-weight: $fw-bold;
+
+        &:not(:last-child) {
+            margin-bottom: $b * 2;
+        }
+    }
+    // .header-form__subtitle
+    &__subtitle {
+        font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+    }
+}
+
+.body-form {
+    // .body-form__inputs
+    &__inputs {
+        &:not(:last-child) {
+            margin-bottom: $b * 8;
+        }
+    }
+    // .body-form__textarea
+    &__textarea {
+        width: 100%;
+        min-height: $b * 51;
+        max-height: $b * 100;
+        padding: $b * 7 $b * 6;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        resize: vertical;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+
+        &::placeholder {
+            font-family: $font-family-main;
+            font-size: $b * 6;
+            color: rgba(#fff, 0.6);
+        }
+    }
+}
+
+.inputs-form {
+    @media (min-width: $md4+px) {
+        display: flex;
+        gap: $b * 10;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    // .inputs-form__input
+    &__input {
+        flex: 1 0 $b * 103;
+        padding: $b * 7 $b * 6;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+
+        @media (max-width: $md2+px) {
+            display: block;
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: $b * 10;
+            }
+        }
+
+        &::placeholder {
+            font-family: $font-family-main;
+            font-size: $b * 6;
+            color: rgba(#fff, 0.6);
+        }
+    }
+}
+
+.bottom-form {
+    @media (min-width: $md3+px) {
+        display: flex;
+        gap: $b * 10;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    // .bottom-form__checkbox
+    &__checkbox {
+        font-size: $b * 6;
+
+        @media (min-width: $md3+px) {
+            max-width: $b * 120;
+        }
+    }
+    // .bottom-form__btn
+    &__btn {
+        color: inherit;
+
+        @media (min-width: $md3+px) {
+            min-width: $b * 107;
+            max-width: $b * 150;
+        }
+
+        @media (max-width: $md3+px) {
+            width: 100%;
+        }
+    }
+}
+
+// =========================================
+
+.form-popup {
+    // .form-popup__inputs
+    &__inputs {
+        &:not(:last-child) {
+            margin-bottom: $b * 20;
+        }
+
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: $b * 8;
+            }
+        }
+    }
+    // .form-popup__input
+    &__input {
+        position: relative;
+
+        label {
+            position: absolute;
+            top: $b * 3;
+            left: $b * 10;
+            font-size: $b * 6;
+            line-height: 140%;
+            color: rgba(#000, 0.6);
+        }
+
+        input {
+            width: 100%;
+            padding: $b * 11 $b * 3 $b * 8;
+            background-color: $color-bg;
+            border: none;
+            border-radius: $b * 4;
+
+            &:focus {
+                @include focus;
+            }
+        }
+    }
+    // .form-popup__textarea
+    &__textarea {
+        textarea {
+            width: 100%;
+            min-height: $b * 50;
+            max-height: $b * 150;
+            padding: $b * 7 $b * 3;
+            resize: vertical;
+            background-color: $color-bg;
+            border: none;
+            border-radius: 8px;
+
+            &:focus {
+                @include focus;
+            }
+
+            &::placeholder {
+                font-family: $font-family-main;
+                font-size: $b * 6;
+                line-height: 140%;
+                color: rgba(#000, 0.6);
+            }
+        }
+    }
+    // .form-popup__checkbox
+    &__checkbox {
+        &:not(:last-child) {
+            margin-bottom: $b * 12;
+        }
+    }
+    // .form-popup__counter
+    &__counter {
+    }
+    // .form-popup__btn
+    &__btn {
+        &:not(:last-child) {
+            margin-bottom: $b * 15;
+        }
+    }
+}
